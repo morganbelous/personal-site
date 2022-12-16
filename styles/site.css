@@ -1,0 +1,629 @@
+/* COLORS */
+:root {
+  --green: #57ba86;
+  --dark-green: #1b5c48;
+  --blue: #669cff;
+  --light-gray: #f0f0f0;
+  --dark-gray: rgb(68, 68, 68);
+  --medium-gray: rgb(110, 110, 110);
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  /*scroll-behavior: smooth;*/
+}
+
+/* PAGE FADE IN */
+body {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  font-size: calc(30px + (50 - 30) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h2 {
+  font-size: calc(24px + (30 - 24) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h3 {
+  font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+}
+
+p {
+  line-height: 150%;
+  margin: 0;
+  font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* NAVIGATION */
+header {
+  width: 90%;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.name-title,
+.link-list {
+  white-space: nowrap;
+}
+
+header ul li {
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.link {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--dark-gray);
+  transition: 0.5s;
+}
+
+.current {
+  color: var(--green);
+}
+
+/* RESPONSIVE NAVIGATION */
+@media screen and (max-width: 700px) {
+  .link {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .other-letters {
+    display: none;
+  }
+
+  .initial {
+    margin-left: -5px;
+  }
+
+  .name-title a {
+    font-size: 30px;
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .name-title a {
+    font-size: 22px;
+  }
+  .link {
+    font-size: 14px;
+  }
+}
+
+/* INTRO */
+.intro {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+
+.intro-title {
+  font-weight: bolder;
+  margin-bottom: 0.25em;
+}
+
+.intro-subtitle {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  font-weight: unset;
+}
+
+.intro-subtitle a {
+  color: var(--green);
+}
+
+/* PROJECT GRID */
+.grid-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  margin: 30px;
+  color: black;
+  text-decoration: none;
+  background-color: var(--medium-gray);
+  border-radius: 4px;
+  box-shadow: 6px 7px 20px 0 grey;
+}
+
+/* .project-link {
+  display:block;
+  width:100%;
+  height:100%;
+  background-color: blue;
+  position: relative;
+  z-index:100;
+} */
+
+/*.box {
+  position: relative;
+}*/
+
+/* RESPONSIVE PROJECTS GRID */
+@media screen and (min-width: 375px) {
+  .box {
+    margin: 25px 50px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .box {
+    width: 40%;
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .box {
+    width: 45%;
+    margin: 30px;
+  }
+  .grid-wrapper {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
+/*@media only screen and (max-width: 600px) {
+  .box {
+    padding: 0
+  }
+} */
+
+/* EMPLOY ME */
+.project-content-wrapper {
+  margin: 0 100px;
+}
+
+.project-content-wrapper h2,
+.project-content-wrapper h3 {
+  margin-bottom: 0;
+}
+
+.project-content-wrapper p {
+  margin: 1vh 0;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.project-title {
+  margin-bottom: 0px;
+}
+
+.github-link {
+  text-decoration: none;
+  color: black;
+  display: inline;
+}
+
+.title-underline {
+  display: inline-block;
+  line-height: 0em;
+  padding-bottom: 0.5em;
+  background-color: rgba(87, 186, 134, 0.5);
+}
+
+.video-overview-wrapper {
+  display: flex;
+  flex-direction: row;
+  max-height: 80vh;
+}
+
+video {
+  width: 250px;
+  height: auto;
+  margin-left: 30px;
+  flex-shrink: 0;
+}
+
+.project-em {
+  font-weight: bold;
+  font-style: italic;
+  color: var(--green);
+}
+
+del {
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+/* RESPONSIVE PROJECT */
+@media only screen and (max-width: 1000px) {
+  .project-content-wrapper {
+    margin: 0 75px;
+  }
+
+  .video-overview-wrapper {
+    flex-direction: column;
+    max-height: unset;
+  }
+
+  video {
+    align-self: center;
+    width: 40%;
+    margin: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .project-content-wrapper {
+    margin: 0 20px;
+  }
+}
+
+/* ABOUT ME */
+.about-container {
+  display: flex;
+  align-items: center;
+}
+
+.about-box {
+  display: flex;
+  padding: 5px 30px;
+  margin: 10px;
+  justify-content: center;
+}
+
+.about-link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+img {
+  width: 300px;
+  height: 400px;
+  border-radius: 4px;
+  box-shadow: 6px 7px 28px 0 grey;
+}
+
+/*
+.img-container {
+  align-items: flex-start;
+  flex: 1;
+}
+*/
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.about-title {
+  margin: 0;
+}
+
+.about-para {
+  margin-top: 3vh;
+}
+
+.life {
+  display: inline-block;
+  background: linear-gradient(270deg, var(--green), var(--blue));
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.cornell,
+.dfg {
+  color: black;
+}
+
+.bofa,
+.dti,
+.sbu {
+  color: var(--blue);
+}
+
+.info-1300,
+.sbu-here {
+  color: var(--green);
+}
+
+/* RESPONSIVE IMAGE */
+@media only screen and (max-width: 1000px) {
+  .about-container {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .img-container img {
+    height: 50%;
+    max-width: 50%;
+  }
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--light-gray);
+  width: 100%;
+  padding-top: 4vh;
+  padding-bottom: 5vh;
+  margin-top: 16vh;
+}
+
+.email p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* SOCIAL MEDIA ICONS: https://codepen.io/mattbhenley/pen/aRKmgR */
+.social-icons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.email p {
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-size: 18px;
+  color: darkslategrey;
+}
+
+.email a {
+  text-decoration: none;
+  color: darkslategrey;
+  transition: 0.5s;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0.3em;
+  position: relative;
+  font-size: 1.5em;
+}
+
+.social-icons span {
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  transition: all 265ms ease-out;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons a:before {
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  content: " ";
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, var(--green), var(--dark-green));
+  transition: all 265ms ease-out;
+}
+
+.scroll {
+  align-self: flex-end;
+}
+
+.scroll a {
+  color: darkslategrey;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 12%;
+  right: 2em;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+  transition: 0.28s;
+}
+
+/* RESPONSIVE FOOTER */
+/* @media only screen and (max-width: 375px) {
+  footer {
+    position: relative;
+  }
+} */
+
+@media only screen and (max-width: 600px) {
+  .email p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .scroll {
+    display: none;
+  }
+}
+
+/* @media only screen and (min-width: 700px) {
+  .about-container {
+    margin-bottom: 11vh;
+  }
+} */
+
+/* ALL HOVER EFFECTS, only active on desktop */
+@media screen and (min-width: 700px) {
+  /* NAV HOVER */
+  .link:hover {
+    color: var(--green);
+  }
+
+  /* Hover.css (https://ianlunn.github.io/Hover/)
+  Author: Ian Lunn @IanLunn */
+  /* Grow */
+  .hvr-grow {
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+
+  .hvr-grow:hover,
+  .hvr-grow:focus,
+  .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /* Hover.css (https://ianlunn.github.io/Hover/)
+  Author: Ian Lunn @IanLunn */
+  /* Float */
+  .hvr-float {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+
+  .hvr-float:hover {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  /* UNDERLINE HOVER */
+  /* SOURCE: https://codepen.io/jstn/pen/zuDst */
+  .underline {
+    padding: 1.5px 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .underline:after {
+    background: none repeat scroll 0 0 transparent;
+    background-color: black;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+  }
+
+  .underline:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .bofa:after,
+  .dti:after,
+  .sbu:after {
+    background-color: var(--blue);
+  }
+
+  .info-1300:after,
+  .sbu-here:after,
+  .intro-subtitle a:after {
+    background-color: var(--green);
+  }
+
+  .cornell:after,
+  .dfg:after {
+    color: black;
+  }
+
+  /* LIFE HOVER */
+  .life:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease;
+  }
+
+  /* EMAIL HOVER */
+  .email a:hover {
+    color: black;
+  }
+
+  /* SOCIAL ICONS HOVER */
+  /* SOCIAL MEDIA ICONS: https://codepen.io/mattbhenley/pen/aRKmgR */
+  .social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+  }
+
+  .social-icons a:hover span {
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    color: var(--green);
+    background: -webkit-linear-gradient(45deg, var(--green), var(--dark-green));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+  }
+
+  /* SCROLL TO TOP HOVER*/
+  .scroll a:hover {
+    opacity: 1;
+    transition: 0.3s;
+  }
+}

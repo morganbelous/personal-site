@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="top">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-155091984-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-155091984-1");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles/site.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <script src="scripts/all.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/mb-favicon.ico" />
+    <title>Employ Me - Morgan Belous</title>
+    <meta
+      name="description"
+      content="Morgan is a Cornell student passionate about web and iOS development."
+    />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <header>
+      <nav>
+        <h2 class="name-title hvr-grow">
+          <a class="link" href="home.html"
+            >M<span class="other-letters">organ</span>
+            <span class="initial">B</span
+            ><span class="other-letters">elous</span></a
+          >
+        </h2>
+        <ul class="link-list">
+          <li class="hvr-grow">
+            <a class="link current" href="home.html">Work</a>
+          </li>
+          <li class="hvr-grow"><a class="link" href="about.html">About</a></li>
+          <li class="hvr-grow">
+            <a class="link" href="Morgan_Belous_Resume.pdf" target="_blank"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="project-content-wrapper">
+      <div class="video-overview-wrapper">
+        <div>
+          <div class="title-wrapper">
+            <h1 class="project-title">Employ Me&nbsp;</h1>
+            <a
+              class="github-link underline"
+              href="https://github.com/morganbelous/employ-me"
+              target="_blank"
+              >GitHub</a
+            >
+          </div>
+
+          <div class="project-overview">
+            <h2 class="title-underline">Overview</h2>
+            <p>
+              Employ Me is an app for Cornell Students to get connected! Post
+              and browse jobs within the Cornell community. Whether you're a
+              graphic designer, tutor, or makeup artist, this is the place to
+              find clients on campus!
+            </p>
+
+            <h2 class="title-underline">Timeline</h2>
+            <p>November 2019 - Present</p>
+
+            <h2 class="title-underline">Technolgies Used</h2>
+            <h3>Frontend:</h3>
+            <p>Swift, SnapKit, GoogleSignIn</p>
+            <h3>Backend:</h3>
+            <p>Python, SQLAlchemy, Heroku</p>
+          </div>
+        </div>
+
+        <video playsinline autoplay muted loop controls>
+          <source src="employ-me-demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="project-content">
+        <h2 class="title-underline">The Idea</h2>
+        <p>
+          Cornell's college campus is brimming with talent. However, it’s often
+          a challenge to reach a large audience of students quickly and easily.
+          Other than the Cornell meme Facebook group, individual clubs, and
+          other campus groups, it can seem impossible to bring the community
+          together. I wanted to create a freelance marketplace that allows
+          students to post their talents and services for others to take
+          advantage of. On the flip side, if someone were ever in need of a
+          tutor for an upcoming prelim, a photographer to snap a new fancy
+          headshot, or even a software engineer to make the next best social
+          network come to life, they could use Employ Me to fulfill their needs
+          and support their peers at same time.
+        </p>
+
+        <h2 class="title-underline">The Story</h2>
+        <p>
+          I started this project in November of 2019. Unfortunately, it was kind
+          of pushed to the back burner as school picked up for the spring
+          semester. However, once I got home for
+          <span class="project-em">coronacation~,</span>
+          I wanted to take advantage of my newfound free time. Within the first
+          few days of coming home, I spent hours setting up the server,
+          deploying it to Heroku, and connecting it to the frontend. I think
+          that finally being able to retrieve data from the server was one of my
+          proudest accomplishments of the whole project. Since then, I have
+          added so much more to the app. In addition to creating my own server,
+          I did a complete redesign, learned all about networking, integrated
+          Google Sign in, experimented with tab view controllers, and more.
+        </p>
+
+        <h2 class="title-underline">Challenges Faced</h2>
+
+        <h3>Google Sign In and Navigation</h3>
+        <p>
+          This project was my first time experimenting with Google Sign, and it
+          was definitely no walk in the park. Setting up the sign in page part
+          wasn’t too bad, thanks to the super helpful documentation that Google
+          provides. However, the main challenge was integrating the sign in view
+          controller with the other controllers. Ultimately, I decided to set
+          the root view controller to a UINavigationController and then present
+          the sign in view controller modally. This way, the sign in page is
+          only presented if the user is not signed in.
+        </p>
+
+        <h3>Creating the Backend</h3>
+        <p>
+          At school, I was lucky enough to take a backend development course,
+          where I learned how to create a Python Flask app using SQL and
+          SQLAlchemy. I learned how to run localhost and test routes using
+          Postman. However, deployment was a completely new challenge. I did
+          some research, and decided that Heroku would be the best choice for
+          me. It seemed pretty popular (and more importantly, free). Connecting
+          Heroku to the git repository, setting up the environment, and adding
+          all required files <del>almost made me pull my hair out</del> was
+          definitely super easy and no problem at all. Always up for a
+          challenge, though, and reaching this milestone was definitely one of
+          my most proud accomplishments for this project!
+        </p>
+
+        <h3>Base 64 Image Encoding</h3>
+        <p>
+          I needed to figure out a way to deal with the job images. Originally,
+          I had images in the assets folder, and was just storing the names of
+          the images in the database. However, I knew that this wasn't scalable.
+          I considered using Google Firebase to store the images, but ultimately
+          decided to use base 64 encoding. It seemed easy enough: convert an
+          image to a string, store the string, and then fetch the string and
+          decode it to use in the collection view cells. It was a challenge
+          trying to figure out what the base 64 strings of the original images
+          were, because they were too long to print out. I then tried to use an
+          online encoder, but it was giving me the wrong strings, resulting in a
+          bunch of fatal errors because they couldn't be decoded properly.
+          Finally, I decided to use breakpoints to hover over the variables and
+          copy the base 64 strings, which I then pasted into the SQLite
+          database. Yay! I know that this might not be the best solution to my
+          problem, however, I think that it works perfectly fine for the size
+          and purpose of my app. If I ever were to actually release my app for
+          the public, learning more about data storage and considering privacy,
+          security and space concerns would be really interesting!
+        </p>
+
+        <h2 class="title-underline">Lessons Learned</h2>
+        <h3>Viritual Environments</h3>
+        <p>
+          Previously, I didn’t think that virtual environments were worth my
+          time. I didn’t see the need for them and they just seemed like a pain
+          to navigate. Naively, I would just download Python packages straight
+          to my computer. Honey, did I have a big storm coming. Creating a
+          requirements.txt file for deployment with only the necessary
+          dependencies was <span class="project-em">virtually</span> (haha,
+          punny) impossible with all of the dozens of packages I had installed.
+          Using a virtual environment made everything so much easier to work
+          with!
+        </p>
+        <h3>Never Giving Up</h3>
+        <p>
+          When I started making this app in November, I could never have
+          imagined what it turned into. So many hours of watching YouTube
+          tutorials, learning new things, debugging, and just staring at the
+          computer screen hopelessly went into this project. There were so many
+          times that I thought about giving up. But, with every challenge that I
+          faced, the feeling of finding a solution just got more and more
+          exhilarating. I am so proud of what I have created, and it just goes
+          to show that I can do anything that I put my mind to. I can’t wait to
+          see what the future holds!
+        </p>
+
+        <h2 class="title-underline">What's Next?</h2>
+        <p>
+          If I were to continue developing this app, I have a lot of ideas.
+          Firstly, I would create a system where users could leave reviews on
+          certain postings, so that future users could gain some more insight on
+          a potential hire. Secondly, I would integrate Google Firebase Chat to
+          allow for communication directly inside the app. Lastly, I would
+          incorporate some kind of payment platform, such as Venmo, which would
+          allow all transactions to occur within the app, too.
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="email">
+        <p>
+          Let's chat! Email me at
+          <a class="underline" href="mailto:mhb224@cornell.edu"
+            >mhb224@cornell.edu</a
+          >
+        </p>
+      </div>
+
+      <div class="social-container">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.instagram.com/morganbelous/" target="_blank"
+              ><span class="fa fa-instagram"></span
+            ></a>
+          </li>
+          <li>
+            <a href="mailto:mhb224@cornell.edu"
+              ><span class="fa fa-envelope-o"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/morgan-belous/" target="_blank"
+              ><span class="fa fa-linkedin"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/morganbelous" target="_blank"
+              ><span class="fa fa-github"></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="scroll">
+        <a href="#top"><span class="fa fa-arrow-up fa-2x"></span></a>
+      </div>
+    </footer>
+  </body>
+</html>
